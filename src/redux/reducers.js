@@ -5,7 +5,7 @@ const appState = {
         contents: [],
     },
     listUniversity: {
-        universites: [],
+        universities: [],
     },
     listFaculty: {
         faculties: [],
@@ -44,7 +44,7 @@ const app = (state = {...appState}, action) => {
             return {
                 ...state,
                 listUniversity: {
-                    universites: action.payload,
+                    universities: action.payload,
                 },
                 isFecthing: false
             }

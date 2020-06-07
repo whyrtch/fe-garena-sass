@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import SliderArrow from '../components/Arrow';
+import Arrow from '../components/Arrow';
 import { getDataTestimony } from '../redux/actions';
 import {connect} from 'react-redux';
 
 
-export class Testimonials extends Component {
+export class ListTetimony extends Component {
   testimonials = []
 
 
@@ -19,9 +19,10 @@ export class Testimonials extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      nextArrow: <SliderArrow />,
-      prevArrow: <SliderArrow />
+      nextArrow: <Arrow />,
+      prevArrow: <Arrow />
     };
+    
     const {testimonials} = this.props;
     var data = this.testimonials;
     if(testimonials){
@@ -62,4 +63,4 @@ const mapDispatchToProps = {
     getDataTestimony
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Testimonials);
+export default connect(mapStateToProps, mapDispatchToProps)(ListTetimony);

@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 import { getDataContents, getDataUniversty, getDataFaculty, getDataTestimony } from '../redux/actions';
 
 import Header from '../components/Header';
-import UnivSlider from '../containers/ListUniversity';
-import Testimonials from './Testimonial';
+import ListUniversity from '../containers/ListUniversity';
+import ListTestimony from './ListTestimony';
 
 class Home extends Component {
 
@@ -80,7 +80,7 @@ componentDidMount(){
                     <section id="partner-universities">
                         <div className="title">Partner Universities</div>
                         <div className="slider">
-                            <UnivSlider univ={universities} faculty={faculties}/>
+                            <ListUniversity univ={universities} faculty={faculties}/>
                         </div>
                     </section>
                 
@@ -136,7 +136,7 @@ componentDidMount(){
                     <section id="testimonials">
                         <div className="title">Testimonials</div>
                         <div className="slider">
-                            <Testimonials testimonials={this.props.testimonials}/>
+                            <ListTestimony testimonials={this.props.testimonials}/>
                         </div>
                     </section>
 
